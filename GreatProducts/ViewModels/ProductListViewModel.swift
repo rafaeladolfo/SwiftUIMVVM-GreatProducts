@@ -21,8 +21,8 @@ final class ProductListViewModel : ProductListViewModelProtocol, ObservableObjec
     @Published var productList: [Product] = []
     
     init() {
-        productList.append(Product(description: "iPhone"))
-        productList.append(Product(description: "Macbook Pro"))
+        productList.append(Product(description: "iPhone", detail: "iPhone SE 2020", price: 399.90))
+        productList.append(Product(description: "Macbook Pro", detail: "Macbook Pro 2020", price: 1299.90))
     }
 }
 
