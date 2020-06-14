@@ -16,16 +16,16 @@ struct ProductListView: View {
         NavigationView {
             List {
                 ForEach(viewModel.productList) { product in
-                    Text("Description: " + product.description)
+                    NavigationLink(product.description, destination: ProductDetailView(description: product.description, detail: product.detail, price: product.price))
                 }
             }
+            .navigationBarTitle("Products")
             .navigationBarItems(trailing: Button(action: {
                 self.viewModel.addNewProduct()
             }, label: {
                 Text("Add new product")
             } ))
         }
-        
     }
 }
 
